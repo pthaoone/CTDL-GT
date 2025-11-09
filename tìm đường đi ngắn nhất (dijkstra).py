@@ -45,10 +45,10 @@ def input_graph():
     while True:
         try:
             n = int(input("Nhập số node: "))
-            if 1 <= n:
+            if n >= 3:
                 break
             else:
-                print(f"Số node phải nằm trong khoảng 1 đến {n}.")
+                print("Số node phải lớn hơn hoặc bằng 3!")
         except ValueError:
             print("Vui lòng nhập một số nguyên hợp lệ!")
 
@@ -65,7 +65,7 @@ def input_graph():
     for node in nodes:
         G.add_node(node)
 
-    print("\nNhập cạnh dạng: u v w (vd: A B 5). Gõ 'done' để dừng. Gõ 'delete' để xóa cạnh vừa nhập.")
+    print("\nNhập cạnh dạng: u v w (vd: A B 5). Gõ 'done' để dừng. Gõ 'delete' để xóa cạnh chỉ định (u,v).")
     
     while True:
         line = input("Cạnh: ").strip()
@@ -159,7 +159,7 @@ def main():
             run_dijkstra(G)
         elif choice == "2":
             if G is None:
-                print("Bạn chưa nhậo đồ thị! Hãy chọn 1 để nhập trước")
+                print("Bạn chưa nhập đồ thị! Hãy chọn 1 để nhập trước")
             else:
                 run_dijkstra(G)
         elif choice == "0":
@@ -171,3 +171,4 @@ def main():
 if __name__ == "__main__":
 
     main()
+
