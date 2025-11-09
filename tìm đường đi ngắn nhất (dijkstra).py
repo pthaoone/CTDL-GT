@@ -150,12 +150,18 @@ def main():
     while True:
         print("\n=== MENU ĐỒ THỊ DIJKSTRA (CÓ HƯỚNG) ===")
         print("1. Nhập đồ thị mới")
+        print("2. Chạy thuật toán Dijkstra trên đồ thị hiện tại")
         print("0. Thoát")
         choice = input("Nhập lựa chọn: ")
 
         if choice == "1":
             G = input_graph()
             run_dijkstra(G)
+        elif choice == "2":
+            if G is None:
+                print("Bạn chưa nhậo đồ thị! Hãy chọn 1 để nhập trước")
+            else:
+                run_dijkstra(G)
         elif choice == "0":
             print("Kết thúc chương trình")
             break
@@ -163,4 +169,5 @@ def main():
             print("Lựa chọn không hợp lệ! Vui lòng chọn lại.")
 
 if __name__ == "__main__":
+
     main()
