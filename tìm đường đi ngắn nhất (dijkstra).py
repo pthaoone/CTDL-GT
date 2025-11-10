@@ -65,7 +65,7 @@ def input_graph():
     for node in nodes:
         G.add_node(node)
 
-    print("\nNhập cạnh dạng: u v w (vd: A B 5). Gõ 'done' để dừng. Gõ 'delete' để xóa cạnh chỉ định (u,v).")
+    print("\nNhập cạnh dạng: u v w (vd: A B 5.2). Gõ 'done' để dừng. Gõ 'delete' để xóa cạnh chỉ định (u,v).")
     
     while True:
         line = input("Cạnh: ").strip()
@@ -171,4 +171,5 @@ def main():
 if __name__ == "__main__":
 
     main()
+
 
